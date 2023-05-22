@@ -6,21 +6,17 @@ You are invited to the regex tutorial. The regular phrase /#?([a-f0-9]6|[a-f0-9]
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regular expression /#?([a-f0-9]6|[a-f0-9]A valid hex color value is represented by a string beginning with an optional # character, followed by either a 6-character or 3-character sequence made up of lowercase letters a-f and digits 0-9. The string "3" is intended to match this value.
 
 ## Table of Contents
 
 - [Anchors](#anchors)
+- [Optional Character](#optional-character)
+- [Character Class](#character-class)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Grouping and Alternation](#grouping-and-alternation)
+- [Anchors (End)](#anchors-end)
+- [Example](#example)
 
 ## Regex Components
 
