@@ -1,6 +1,8 @@
-# Title (replace with your title)
+# Regex Hex Value Tutorial
 
-Introductory paragraph (replace this with your text)
+## Introduction
+
+You are invited to the regex tutorial. The regular phrase /#?([a-f0-9]6|[a-f0-9]3)$/, which is used to match a hex value, will be discussed in this tutorial. We will dissect each part of the regular expression and describe how it works. You will have a thorough understanding of how this regex operates and how it may be applied in JavaScript by the end of this course.
 
 ## Summary
 
