@@ -26,10 +26,28 @@ The regular expression /#?([a-f0-9]6|[a-f0-9]A valid hex color value is represe
 1. Anchors <a name="anchors"></a>
 The regex starts with the ^ character, often known as a caret or anchor. It denotes where the input string begins. In this instance, it makes sure that the string's first character matches the hex value.
 
+Example:
+
+const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/;
+
+console.log(regex.test("#FF0000")); // true
+console.log(regex.test("FF0000")); // false
+
+
 ### Optional Character
 
 2. Optional Character <a name="optional-character"></a>
 The character #?, which denotes that the character is optional, comes after the anchor. The quantifier "?" indicates either 0 or 1 instances of the previous character or group. It permits the hex value in this instance to begin with # or without.
+
+Example:
+
+const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/;
+
+console.log(regex.test("#FF0000")); // true
+console.log(regex.test("FF0000")); // true
+console.log(regex.test("#123ABC")); // true
+console.log(regex.test("123ABC")); // true
+
 
 ### Character Class
 
@@ -38,20 +56,60 @@ There are two numbers inside the parentheses: '[a-f0-9]{6}|[a-f0-9]{3}'. This ch
 * '[a-f0-9]{6}' matches a string of exactly 6 characters, which can be any digit from '0' to '9' or any lowercase letter from 'a' to 'f'. This illustrates the situation where the hex value has six characters.
 * '[a-f0-9]{3}' matches an exact 3-character sequence that follows the same pattern as above. This illustrates the situation where the hex value has three characters.
 
+Example:
+
+const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/;
+
+console.log(regex.test("#FF0000")); // true
+console.log(regex.test("#F00")); // true
+console.log(regex.test("#123ABC")); // false
+console.log(regex.test("#ABC")); // false
+
+
 ### Quantifiers
 
 4. Quantifiers <a name="quantifiers"></a>
 The quantifiers '{6}' and '{3}' indicate the precise number of times the previous character or group occurs. In this instance, depending on the hex value format, they make sure that the character class matches either 6 or 3 characters.
+
+Example:
+
+const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/;
+
+console.log(regex.test("#FF0000")); // true
+console.log(regex.test("#F00")); // true
+console.log(regex.test("#123ABC")); // false
+console.log(regex.test("#ABC")); // false
+
 
 ### Grouping and Alternation
 
 5. Grouping and Alternation <a name="grouping-and-alternation"></a>
 Within parenthesis (), the character class '[a-f0-9]{6}|[a-f0-9]{3}' is enclosed. As a result, we can use the '|' alternation operator to match either the 6-character or 3-character hex value format and produce a capturing group.
 
+Example:
+
+const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/;
+
+const input = "#FF0000";
+const match = regex.exec(input);
+
+console.log(match[1]); // FF0000
+
+
 ### Anchors (End)
 
 6. Anchors (End) <a name="anchors-end"></a>
 The '$' character, another anchor, marks the conclusion of the regex. It indicates that the input string has ended. In this instance, it ensures that the hex value is matched all the way through the string and forbids the inclusion of any more characters.
+
+Example:
+
+const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/;
+
+console.log(regex.test("#FF0000")); // true
+console.log(regex.test("#F00")); // true
+console.log(regex.test("#1234567")); // false
+console.log(regex.test("00FF00")); // false
+
 
 ### Example
 
