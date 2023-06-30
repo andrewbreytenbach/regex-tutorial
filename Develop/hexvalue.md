@@ -113,7 +113,7 @@ console.log(regex.test("00FF00")); // false
 
 ### Example
 
-7. Example <a name="example"></a>
+Example <a name="example"></a>
 Let's take a look at an example to illustrate how this regex works:
 
 const regex = /^#?([a-f0-9]{6}|[a-f0-9]{3})$/;
@@ -127,7 +127,7 @@ In the last example, we created a regex object using the notation /.../ and used
 
 ## Author
 
-8. Author <a name="author"></a>
+Author <a name="author"></a>
 The author of this tutorial is Andrew Breytenbach. More of my work is available on GitHub: https://github.com/andrewbreytenbach.
 
 Congratulations! You have mastered the knowledge of the many parts of the regex '/#?([a-f0-9]{6}|[a-f0-9]{3})$/' used for matching a hex value. In JavaScript, regular expressions are effective tools for pattern matching and validation. With this understanding, you can use regex in your web development projects for a variety of circumstances.
